@@ -1,0 +1,1 @@
+/Users/daryl/.config/vim/.fzf/shell/key-bindings.fish

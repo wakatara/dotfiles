@@ -1,0 +1,20 @@
+session_name: M
+windows:
+- panes:
+  - h log
+  window_name: hab
+- panes:
+  - nb
+  window_name: nb
+- panes:
+  - cd ~/Code/daryl.wakatara.com
+  window_name: blog
+- panes:
+  - cd ~/Code/learning/bio/
+  window_name: bio
+- panes:
+  - cd ~/Code/dev/go
+  window_name: go
+- panes:
+  - neofetch
+  window_name: sh

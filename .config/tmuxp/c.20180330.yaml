@@ -1,0 +1,29 @@
+session_name: C
+windows:
+- layout: even-horizontal
+  panes:
+  - null
+  - null
+  window_name: jrnl
+- layout: 6c08,158x42,0,0{79x42,0,0,3,78x42,80,0[78x21,80,0,6,78x20,80,22,8]}
+  panes:
+  - cd ~/Code/blog/daryl.wakatara.com
+  - cd ~/Code/blog/daryl.wakatara.com
+  - cd ~/Code/blog/daryl.wakatara.com
+  window_name: blog
+- panes:
+  - nb
+  window_name: nb
+- panes:
+  -
+  window_name: irc
+- layout: 6c08,158x42,0,0{79x42,0,0,3,78x42,80,0[78x21,80,0,6,78x20,80,22,8]}
+  panes:
+  - cd ~/Code/learning
+  - cd ~/Code/learning
+  - cd ~/Code/learning
+  window_name: py
+- panes:
+  -
+  window_name: bash
+

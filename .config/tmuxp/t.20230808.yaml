@@ -1,0 +1,20 @@
+session_name: T
+windows:
+  - panes:
+      - h log
+    window_name: hab
+  - panes:
+      - nb
+    window_name: nb
+  - panes:
+      - cd ~/Code/daryl.wakatara.com
+    window_name: blog
+  - panes:
+      - cd ~/Code/astro/
+    window_name: astro
+  - panes:
+      - cd ~/Code/dev/rust
+    window_name: rs
+  - panes:
+      - neofetch
+    window_name: sh

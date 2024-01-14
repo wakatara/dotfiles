@@ -1,0 +1,36 @@
+# Colours
+# Attempt at Nord colour scheme
+# Works best with Nord kitty colour scheme set
+
+color background          color15    default
+color listnormal          color248   default
+color listnormal_unread   color4     default
+color listfocus           color0     color4
+color listfocus_unread    color0     color4   bold
+color info                color12    color0
+color article             color248   default
+
+# highlights
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+highlight feedlist "^─.*$" color6 color0 bold
+
+
+text-width 78
+browser open
+confirm-mark-feed-read false
+# browser "firefox %u"
+# browser "xdg-open %u"
+# macro m set browser "mpv %u"; open-in-browser ; set browser "xdg-open %u"
+player "mpv"
+macro m set browser "mpv %u"; open-in-browser ; set browser open
+download-path "~/Downloads/%n"
+save-path "~/Downloads"
+bookmark-cmd instapaper # symlinked in u/l/b to ~/.scripts
+bookmark-autopilot yes
+bind-key i bookmark
+reload-threads 20
+cleanup-on-quit yes

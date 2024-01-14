@@ -1,0 +1,12 @@
+session_name: C
+windows:
+- panes:
+  - emacs
+  window_name: emx
+- panes:
+  - nb
+  window_name: nb
+- panes:
+  - cd ~/Code
+  window_name: sh
+

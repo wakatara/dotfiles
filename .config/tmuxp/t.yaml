@@ -1,0 +1,26 @@
+session_name: T
+windows:
+  - panes:
+      - h log
+    window_name: hab
+  - panes:
+      - nb
+    window_name: nb
+  - panes:
+      - cd ~/Code/daryl.wakatara.com
+    window_name: blog
+  - panes:
+      - cd ~/Code/UHawaii/COMA/coma-dev-maria/
+    window_name: maria
+  - panes:
+      - cd ~/Code/UHawaii/COMA/coma-airflow/
+    window_name: af
+  - panes:
+      - cd ~/Code/UHawaii/COMA/coma-api/
+    window_name: astro
+  - panes:
+      - cd ~/Code/dev/mgqb/
+    window_name: mgqb
+  - panes:
+      - cd ~ && neofetch
+      - window_name: sh

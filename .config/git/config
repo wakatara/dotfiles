@@ -1,0 +1,54 @@
+[user]
+	name = Daryl Manning
+	email = daryl@wakatara.com
+[color]
+	ui = true
+[alias]
+  hist = --no-pager log --color --pretty=format:'%C(yellow)%h%C(reset)%C(bold red)%d%C(reset) %s %C(black)— %an (%ad)%C(reset)' --relative-date | emojify | less -r
+  log= log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+  branches= branch -a
+  tags = tag
+  remotes = remote -v
+  stashes = stash list
+  unstage = reset -q HEAD --
+  trash = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
+  nuke = reset --hard HEAD && git clean -d -f
+  precommit = diff --cached --diff-algorithm=minimal -w
+  unmerged = diff --name-only --diff-filter=U
+  move = mv
+  remove = rm
+  unstash = stash pop
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
+
+[url "git@github.com:"]
+    insteadOf = "https://github.com/"
+[github]
+	user = wakatara
+[help]
+	autocorrect = 1
+[core]
+	editor = /opt/homebrew/bin/nvim
+	excludesfile = ~/config/git/gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+[init]
+	defaultBranch = main

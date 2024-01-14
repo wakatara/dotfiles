@@ -1,0 +1,68 @@
+# remap prefix to Control + a
+# unbind C-b
+# set -g prefix C-a
+# bind C-a send-prefix
+set -g default-shell $SHELL
+# set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+
+bind C-c copy-mode
+bind b choose-buffer
+bind s choose-session
+
+# quick pane cycling
+unbind ^b
+bind ^b select-pane -t :.+
+
+# shorten command delay
+set -sg escape-time 1
+
+# Use C-a q to kill a pane
+bind q kill-pane
+
+# Start window and pane counts from 1
+set -g base-index 1
+set -g pane-base-index 1
+
+# Do not automatically rename panes
+set-option -g allow-rename off
+
+# Renumber panes if close a middle pane
+set-option -g renumber-windows on
+
+# Use C-a n to rename a pane
+bind n command-prompt "rename-window '%%'"
+
+# Use r to quickly reload tmux settings
+unbind r
+bind r source-file ~/.tmux.conf \; display "Reloaded tmux config."
+
+# improve colors
+# set -g default-terminal "xterm-256color"
+set -g default-terminal "screen-256color"
+
+# soften status bar color from harsh green to light gray
+# set -g status-bg '#aaaaaa'
+# set -g status-fg '#666666'
+set -g status-bg colour23
+set -g status-fg white
+
+
+#Set the left and right status
+set -g status-left '#[bg=colour7]#[fg=colour0] #S #[bg=colour23]#[fg=colour7] '
+set -g status-right '#[bg=colour7]#[fg=colour0] %b %d %H:%M '
+
+
+set -g window-status-current-format "#[fg=colour23]#[bg=colour7]#[fg=colour0]#[bg=colour7] #I #[fg=colour0] #W #[fg=colour7]#[bg=colour23]"
+set -g window-status-format "#[fg=colour7]#[bg=colour23]#I#[fg=colour7]  #W"
+
+set-option -g status-interval 1
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# New window with default path set to last path
+bind - split-window -v -c "#{pane_current_path}"
+bind \\ split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
+run-shell "~/.config/tmux/themes/nord-tmux/nord.tmux"
