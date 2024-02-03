@@ -2,21 +2,21 @@
 # Attempt at Nord colour scheme
 # Works best with Nord kitty colour scheme set
 
-color background          color15    default
-color listnormal          color248   default
-color listnormal_unread   color4     default
-color listfocus           color0     color4
-color listfocus_unread    color0     color4   bold
-color info                color12    color0
-color article             color248   default
+# color background          color15    default
+# color listnormal          color248   default
+# color listnormal_unread   color4     default
+# color listfocus           color0     color4
+# color listfocus_unread    color0     color4   bold
+# color info                color12    color0
+# color article             color248   default
 
 # highlights
-highlight article "^(Feed|Link):.*$" color6 default bold
-highlight article "^(Title|Date|Author):.*$" color6 default bold
-highlight article "https?://[^ ]+" color10 default underline
-highlight article "\\[[0-9]+\\]" color10 default bold
-highlight article "\\[image\\ [0-9]+\\]" color10 default bold
-highlight feedlist "^─.*$" color6 color0 bold
+# highlight article "^(Feed|Link):.*$" color6 default bold
+# highlight article "^(Title|Date|Author):.*$" color6 default bold
+# highlight article "https?://[^ ]+" color10 default underline
+# highlight article "\\[[0-9]+\\]" color10 default bold
+# highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+# highlight feedlist "^─.*$" color6 color0 bold
 
 
 text-width 78
@@ -34,3 +34,4 @@ bookmark-autopilot yes
 bind-key i bookmark
 reload-threads 20
 cleanup-on-quit yes
+include ./themes/dark
