@@ -69,6 +69,9 @@ require("lazy").setup({
     -- end,
   },
 
+  -- glow markdown plugin
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+
   -- autocompletion
   "hrsh7th/nvim-cmp", -- completion plugin
   "hrsh7th/cmp-buffer", -- source for text in buffer
