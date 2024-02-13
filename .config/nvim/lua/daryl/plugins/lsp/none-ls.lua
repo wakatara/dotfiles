@@ -1,5 +1,5 @@
 -- import null-ls plugin safely
-local setup, null_ls = pcall(require, "null-ls")
+local setup, null_ls = pcall(require, "none-ls")
 if not setup then
   return
 end
