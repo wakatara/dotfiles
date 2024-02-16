@@ -10,17 +10,12 @@ windows:
       - cd ~/Code/daryl.wakatara.com
     window_name: blog
   - panes:
-      - cd ~/Code/UHawaii/COMA/coma-dev-maria/
-    window_name: maria
+      - cd ~/Code/goma-api/
+    window_name: goma
   - panes:
-      - cd ~/Code/UHawaii/COMA/coma-airflow/
-    window_name: af
+      - cd ~/Code/UHawaii/COMA/coma-prefect/
+    window_name: pf
   - panes:
-      - cd ~/Code/UHawaii/COMA/coma-api/
-    window_name: astro
-  - panes:
-      - cd ~/Code/dev/mgqb/
-    window_name: mgqb
-  - panes:
-      - cd ~ && neofetch
-      - window_name: sh
+      - cd ~ && neofetch /Code/dev/mgqb/
+    window_name: sh
+
