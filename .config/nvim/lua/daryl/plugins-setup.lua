@@ -78,12 +78,12 @@ require("lazy").setup({
   "hrsh7th/cmp-path", -- source for file system paths
 
   -- UndoTree
-  {
-  "jiaoshijie/undotree", dependencies = "nvim-lua/plenary.nvim",
-  config = true,
-  keys = {
-    { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
-  },
+  -- {
+  -- "jiaoshijie/undotree", dependencies = "nvim-lua/plenary.nvim",
+  -- config = true,
+  -- keys = {
+  --   { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+  -- },
 
   -- Handy Go boilerplate helpers
   {
@@ -163,5 +163,4 @@ require("lazy").setup({
 
   -- git integration
   "lewis6991/gitsigns.nvim", -- show line modifications on left hand side
-  }})
-
+  })
